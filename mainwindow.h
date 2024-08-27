@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "stdlib.h"
+//#include "string"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -19,10 +21,13 @@ public:
 
 private slots:
     void on_rollButton_clicked();
+    int roll(int repeat, int dice,int multiplier);
 
     void on_inputBox_textChanged();
 
 private:
     Ui::MainWindow *ui;
+    int result = 0;
+    //String input = "";
 };
 #endif // MAINWINDOW_H
