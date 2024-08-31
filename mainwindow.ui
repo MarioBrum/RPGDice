@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>347</width>
-    <height>167</height>
+    <width>358</width>
+    <height>209</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -61,14 +61,14 @@
      <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
     </property>
     <property name="placeholderText">
-     <string>1d100+5</string>
+     <string>1d6+0</string>
     </property>
    </widget>
-   <widget class="QLabel" name="result">
+   <widget class="QLabel" name="resultLabel">
     <property name="geometry">
      <rect>
       <x>120</x>
-      <y>80</y>
+      <y>90</y>
       <width>101</width>
       <height>61</height>
      </rect>
@@ -86,7 +86,7 @@
      <set>Qt::InputMethodHint::ImhDigitsOnly</set>
     </property>
     <property name="text">
-     <string>100</string>
+     <string>0</string>
     </property>
     <property name="textFormat">
      <enum>Qt::TextFormat::PlainText</enum>
@@ -101,7 +101,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>347</width>
+     <width>358</width>
      <height>21</height>
     </rect>
    </property>

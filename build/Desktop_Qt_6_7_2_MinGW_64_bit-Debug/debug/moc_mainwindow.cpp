@@ -7,6 +7,7 @@
 *****************************************************************************/
 
 #include "../../../mainwindow.h"
+#include <QtGui/qtextcursor.h>
 #include <QtCore/qmetatype.h>
 
 #include <QtCore/qtmochelpers.h>
@@ -38,10 +39,7 @@ constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::string
     "MainWindow",
     "on_rollButton_clicked",
     "",
-    "roll",
-    "repeat",
-    "dice",
-    "multiplier",
+    "rolling",
     "on_inputBox_textChanged"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
@@ -64,12 +62,12 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
        1,    0,   32,    2, 0x08,    1 /* Private */,
-       3,    3,   33,    2, 0x08,    2 /* Private */,
-       7,    0,   40,    2, 0x08,    6 /* Private */,
+       3,    0,   33,    2, 0x08,    2 /* Private */,
+       4,    0,   34,    2, 0x08,    3 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
-    QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int,    4,    5,    6,
+    QMetaType::Int,
     QMetaType::Void,
 
        0        // eod
@@ -86,10 +84,7 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<MainWindow, std::true_type>,
         // method 'on_rollButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'roll'
-        QtPrivate::TypeAndForceComplete<int, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'rolling'
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         // method 'on_inputBox_textChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
@@ -104,7 +99,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         (void)_t;
         switch (_id) {
         case 0: _t->on_rollButton_clicked(); break;
-        case 1: { int _r = _t->roll((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[3])));
+        case 1: { int _r = _t->rolling();
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
         case 2: _t->on_inputBox_textChanged(); break;
         default: ;

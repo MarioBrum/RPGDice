@@ -27,7 +27,7 @@ public:
     QWidget *centralwidget;
     QPushButton *rollButton;
     QTextEdit *inputBox;
-    QLabel *result;
+    QLabel *resultLabel;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -35,7 +35,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(347, 167);
+        MainWindow->resize(358, 209);
         MainWindow->setAutoFillBackground(false);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
@@ -54,18 +54,18 @@ public:
         inputBox->setInputMethodHints(Qt::InputMethodHint::ImhHiddenText|Qt::InputMethodHint::ImhMultiLine);
         inputBox->setVerticalScrollBarPolicy(Qt::ScrollBarPolicy::ScrollBarAlwaysOff);
         inputBox->setHorizontalScrollBarPolicy(Qt::ScrollBarPolicy::ScrollBarAlwaysOff);
-        result = new QLabel(centralwidget);
-        result->setObjectName("result");
-        result->setGeometry(QRect(120, 80, 101, 61));
-        result->setFont(font);
-        result->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
-        result->setInputMethodHints(Qt::InputMethodHint::ImhDigitsOnly);
-        result->setTextFormat(Qt::TextFormat::PlainText);
-        result->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        resultLabel = new QLabel(centralwidget);
+        resultLabel->setObjectName("resultLabel");
+        resultLabel->setGeometry(QRect(120, 90, 101, 61));
+        resultLabel->setFont(font);
+        resultLabel->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
+        resultLabel->setInputMethodHints(Qt::InputMethodHint::ImhDigitsOnly);
+        resultLabel->setTextFormat(Qt::TextFormat::PlainText);
+        resultLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 347, 21));
+        menubar->setGeometry(QRect(0, 0, 358, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -80,8 +80,8 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "RPGDice Manager", nullptr));
         rollButton->setText(QCoreApplication::translate("MainWindow", "ROLL", nullptr));
-        inputBox->setPlaceholderText(QCoreApplication::translate("MainWindow", "1d100+5", nullptr));
-        result->setText(QCoreApplication::translate("MainWindow", "100", nullptr));
+        inputBox->setPlaceholderText(QCoreApplication::translate("MainWindow", "1d6+0", nullptr));
+        resultLabel->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
     } // retranslateUi
 
 };

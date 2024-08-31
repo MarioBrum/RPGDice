@@ -2,8 +2,12 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "stdlib.h"
-//#include "string"
+#include <QTextEdit>
+#include <QPushButton>
+#include <QLabel>
+#include <regex>
+#include <cstdlib>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -21,13 +25,18 @@ public:
 
 private slots:
     void on_rollButton_clicked();
-    int roll(int repeat, int dice,int multiplier);
-
+    int rolling();
     void on_inputBox_textChanged();
 
 private:
+    void parseInput(const QString &input);
+private:
     Ui::MainWindow *ui;
-    int result = 0;
-    //String input = "";
+    int repeat = 1;
+    int dice = 2;
+    int multiplier = 0;
+    QTextEdit *inputBox;
+    QPushButton *rollButton;
+    QLabel *resultLabel;
 };
 #endif // MAINWINDOW_H
